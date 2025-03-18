@@ -20,6 +20,7 @@ The most joyful wallet generator - start dancing in front of your camera!
 - Supports 12-word mnemonics (customizable length)
 - Generates standard wallet addresses
 - Option to select specific cameras (if multiple are available)
+- Supports multiple cryptocurrency wallet types: Bitcoin (BTC), Ethereum (ETH), and Tron (TRC)
 
 ## Usage
 
@@ -38,6 +39,13 @@ Specify camera and mnemonic length:
 python main.py --camera-index 1 --num-words 24
 ```
 
+Generate different wallet types:
+```
+python main.py --coin-type BTC  # Default: Bitcoin
+python main.py --coin-type ETH  # Ethereum
+python main.py --coin-type TRC  # Tron
+```
+
 View more options:
 ```
 python main.py --help
@@ -49,13 +57,15 @@ python main.py --help
 - Employs SHA-256 for hash calculations
 - Generates mnemonics based on BIP39 standard
 - Derives master keys following BIP32 specifications
-- Complies with Bitcoin address generation standards
+- Supports various wallet formats (BTC/ETH/TRC)
+- Complies with cryptocurrency address generation standards
 
 ## Dependencies
 
-- Python 3.7+
+- Python 3 <= 3.10
 - opencv-python
 - ecdsa
+- pysha3
 
 ## License
 

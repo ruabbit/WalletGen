@@ -20,6 +20,7 @@
 - 支持 12 词助记词（可自定义长度）
 - 生成标准钱包地址
 - 可以选择使用特定的摄像头（如果有多个）
+- 支持多种加密货币钱包类型：比特币 (BTC)、以太坊 (ETH) 和波场 (TRC)
 
 ## 使用方法
 
@@ -38,6 +39,13 @@ python main.py --list-cameras
 python main.py --camera-index 1 --num-words 24
 ```
 
+生成不同类型的钱包：
+```
+python main.py --coin-type BTC  # 默认：比特币
+python main.py --coin-type ETH  # 以太坊
+python main.py --coin-type TRC  # 波场
+```
+
 查看更多选项：
 ```
 python main.py --help
@@ -49,13 +57,15 @@ python main.py --help
 - 采用 SHA-256 进行哈希计算
 - 基于 BIP39 标准生成助记词
 - 遵循 BIP32 规范派生主密钥
-- 符合比特币地址生成标准
+- 支持多种钱包格式 (BTC/ETH/TRC)
+- 符合各种加密货币地址生成标准
 
 ## 依赖项
 
-- Python 3.7+
+- Python 3 <= 3.10
 - opencv-python
 - ecdsa
+- pysha3
 
 ## 许可证
 
